@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tip-Calculator</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #conatainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:rgb(226, 225, 225);
+            height: 100vh;
+        }
+        .box1{
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            font-family: arial;
+            height:70vh;
+            width:40vh;
+            background-color: tomato;
+            border-radius: 20px;
+        }
+        .box2{
+            height:63vh;
+            width:40vh;
+            background-color: rgb(105, 80, 75);
+        }
+        .innerbox{
+            height:63vh;
+            width:40vh;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            text-align: left;
+            padding: 10px;
+        }
+        .btnup{
+            /* background-color: rgb(51, 44, 43); */
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .btn{
+            background-color: tomato;
+            padding: 5px;
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        .btn a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn:hover{
+            background-color:rgb(233, 64, 34);
+        }
+    </style>
+</head>
+<body>
+    <div id="conatainer">
+        <div class="box1">TIP CALCULATOR
+            <div class="box2">
+            <div class="innerbox" id="calculator">
+                <form>
+                <h6>How much was your bill?</h6>
+<br>
+                <h6>Rs.<input id="billamt" placeholder="Bill Amount"></input></h6>
+<br>
+                <h6>How was your Service?</h6>
+<br>
+                <select id="servicequal">
+                    <option disabled selected value="0">--Select-Option--</option>
+                    <option value="0.15">15% Outstanding</option>
+                    <option value="0.10">10% Good</option>
+                    <option value="0.05">5% Ok</option>
+                </select>
+            </form>
+<br>
+                <h6>How many people are sharing the bill?</h6>
+<br>
+                <h6><input id="peopleamt" placeholder="Number of People"></input>People</h6>
+                <div class="btnup">
+                <button type="button" class="btn" id="calculate">Calculate</button>
+                </div>
+                <div id="totaltip">
+                    <center><span>Rs.</span><span id="tip">0.00</span>
+                    <small id="each">Each</small></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
